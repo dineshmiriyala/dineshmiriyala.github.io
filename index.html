@@ -1,380 +1,151 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Dinesh Miriyala</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Dinesh  Miriyala Portfolio" />
-	<meta name="keywords" content="Dinesh Miriyala, Data Engineer, Data Analyst, Northeastern University, Boston" />
-	<meta name="author" content="Dinesh Miriyala" />
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dinesh Miriyala Portfolio"/>
+  <title>Dinesh Miriyala | Data Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Space Mono', monospace; }
+    body { background: #f9f9f9; color: #333; }
+    header { background: #222; color: #fff; padding: 60px 20px; text-align: center; }
+    header img { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 20px; }
+    nav { background: #111; padding: 10px 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    h2 { font-size: 28px; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { flex: 1 1 45%; background: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; }
+    .timeline { list-style: none; padding-left: 0; }
+    .timeline li { margin-bottom: 20px; }
+    .footer { background: #222; color: #fff; text-align: center; padding: 20px; }
+    .btn { display: inline-block; background: #007bff; color: #fff; padding: 10px 20px; margin-top: 10px; border-radius: 5px; text-decoration: none; }
+    .social-icons a { margin: 0 10px; color: #007bff; text-decoration: none; }
+    @media (max-width: 600px) {
+      .grid { flex-direction: column; }
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+<header>
+  <img src="images/user-3.jpg" alt="Dinesh Miriyala">
+  <h1>Hi, I'm Dinesh 👋</h1>
+  <p>I build data pipelines, intelligent systems, and no-nonsense automation. Let’s solve something real together.</p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/dinesh-miriyala-daq">LinkedIn</a>
+    <a href="https://github.com/dineshmiriyala">GitHub</a>
+    <a href="https://www.instagram.com/dinesh_miriyala?igsh=dDdhZXhxeHB2cDl0&utm_source=qr">Instagram</a>
+  </div>
+</header>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+<section id="about">
+  <h2>About Me</h2>
+    <p>Hey! I’m Dinesh — a data-driven problem solver with a knack for turning chaos into clean, actionable systems. I specialize in building high-performance Data Engineering pipelines, full-stack software systems, and deploying smart solutions using Machine Learning and Generative AI.</p>
+  <p>Currently exploring freelancing opportunities, I love taking on real-world problems — whether it’s automating business workflows, crafting ETL systems, building chatbots, or training custom transformer models on Reddit or financial data. I work fast, adapt faster, and ship things that work.</p>
+  <p>With hands-on experience in Airflow, PySpark, Snowflake, PostgreSQL, Kafka, FastAPI, LLMs, and more — I thrive in both backend engineering and modern AI-driven applications. I’m always open to collaborations, contracts, or consulting roles where impact matters more than fluff.</p>
+  <p>Let’s build something valuable.</p>
+</section>
 
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/user-3.jpg);"></div>
-							<h1><span>Dinesh Miriyala</span></h1>
-							<h3><span>Data Engineer / ML Enthusiast</span></h3>
-							<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="https://www.linkedin.com/in/dinesh-miriyala-daq"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://github.com/dineshmiriyala"><i class="icon-github2"></i></a></li>
-									<li><a href="https://www.instagram.com/dinesh_miriyala?igsh=dDdhZXhxeHB2cDl0&utm_source=qr "><i class="icon-instagram2"></i></a></li>
-								</ul>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+<section id="skills">
+  <h2>Skills & Tools</h2>
+  <ul class="skills-list">
+    <li><strong>Data Engineering</strong>: Airflow, PySpark, Snowflake, PostgreSQL, AWS</li>
+    <li><strong>Software Engineering</strong>: FastAPI, Flask, Node.js, GitHub Actions, REST APIs</li>
+    <li><strong>Machine Learning</strong>: scikit-learn, Pandas, NLP, XGBoost, Transformers</li>
+    <li><strong>GenAI & LLMs</strong>: HuggingFace, LangChain, OpenAI API, Vector DBs</li>
+    <li><strong>Freelancer Stack</strong>: Zoho Mail, GitHub, Calendly, Notion, Figma</li>
+  </ul>
+</section>
 
-	<div id="fh5co-about" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Me</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="info">
-						<li><span class="first-block">Full Name:</span><span class="second-block">Dinesh Miriyala</span></li>
-						<li><span class="first-block">Phone:</span><span class="second-block">+1 857-334-9324</span></li>
-						<li><span class="first-block">Email:</span><span class="second-block">miriyaladinesh1@gmail.com</span></li>
-						<li><span class="first-block">Address:</span><span class="second-block">182 Walnut ave, Boston, MA, 02119</span></li>
-					</ul>
-				</div>
-				<div class="col-md-8">
-					<h2>Hello There!</h2>
-					<p>Hello there! I'm Dinesh, an avid learner and explorer of diverse topics, constantly fuelued by curiosity and a passion for knowledge. With a background in Data Engineering and Analytics, I thrive on engaging in meaningful discussions and sharing insights with others.</p>
-					<p>My journey in conversation extents from unravelling the mysteries of science and technology to delving into depths of data science and machine learning.</p>
-					<p>As an enthusiast of Data Science and Engineering, I believe in the power of continous growth and self-improvement. Whether through exchanging ideas, embarking on new projects, or simply reading through different papers, I cherish every opportunity to expand my horizons and make meaningful connections.</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://www.linkedin.com/in/dinesh-miriyala-daq"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://github.com/dineshmiriyala"><i class="icon-github2"></i></a></li>
-									<li><a href="https://www.instagram.com/dinesh_miriyala?igsh=dDdhZXhxeHB2cDl0&utm_source=qr "><i class="icon-instagram2"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Bill Generator</h3>
+      <p>Invoice management system for small businesses using Flask + SQLite</p>
+      <a href="https://github.com/dineshmiriyala/bill-generator" target="_blank" class="btn">GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Stock ETL Dashboard</h3>
+      <p>Real-time stock analytics using PySpark, PostgreSQL, and Snowflake</p>
+      <a href="https://github.com/dineshmiriyala/stock_etl_daily_faang" target="_blank" class="btn">GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Reddit NLP Bot</h3>
+      <p>Trained a custom transformer model on Reddit data using Python & NLP. Built tokenizer, attention, and deployed via REST API with 97% accuracy.</p>
+      <a href="https://github.com/dineshmiriyala/MLP" target="_blank" class="btn">GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Kafka Chat App</h3>
+      <p>Real-time messaging system built on Kafka and Python</p>
+      <a href="https://github.com/dineshmiriyala/Kafka-messenger" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+</section>
 
-	<div id="fh5co-resume" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>My Resume</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Data Engineer</h3>
-									<span class="company">Liberty Mutual - 2020 - 2021</span>
-								</div>
-								<div class="timeline-body">
-									<p>Worked on liason with Data Analysts and Scientists on different kinds of insurance data to satisfy their data requiremens.</p>
-									<p>Assited in data migration to Azure Cloud Infrastructure using ETL pipelines and various automation tools.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Electronics and Communications Intern</h3>
-									<span class="company">South Central Railway - 2019 - 2019</span>
-								</div>
-								<div class="timeline-body">
-									<p>Developed interactive Dashboards for different train related data for better visualization and understanding.</p>
-									<p>Utilized Microsoft Suite and Python to streamline the process.</p>
-								</div>
-							</div>
-						</li>
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Masters Degree</h3>
-									<span class="company">Northeastern University - 2022 - 2023</span>
-								</div>
-								<div class="timeline-body">
-									<p>Graduated with a astonishing 3.82 GPA in the field of Data Analytics.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelors Degree</h3>
-									<span class="company">KL University - 2016 - 2020</span>
-								</div>
-								<div class="timeline-body">
-									<p>Graduated with 8.02 GPA (out of 10) in Electronics and Communication Engineering, majoring in Signal Processing.</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+<section id="book">
+  <h2>Book a Session</h2>
+  <p>If you're ready to solve a real business or tech problem, book a 1-on-1 session directly with me.</p>
 
+  <div class="card">
+    <h3>Let’s Talk About Your Problem Space</h3>
+    <p>Free 30-minute discovery call to understand your use case and explore how I can help.</p>
+    <a href="https://dineshmiriyala.zohobookings.in/" target="_blank" class="btn">Book a Call</a>
+  </div>
 
-	<div id="fh5co-skills" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Skills</h2>
-				</div>
-			</div>
-			<div class="row row-pb-md">
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="95"><span><strong>Python</strong>95%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="93"><span><strong>MYSQL</strong>95%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>Azure</strong>93%</span></div>
-				</div>
+  <div class="card">
+    <h3>Deep Dive: Problem Breakdown & Strategy</h3>
+    <p>Paid 30-minute call (₹499 INR) to deeply explore your problem, uncover root issues, and plan next steps.</p>
+    <a href="https://dineshmiriyala.zohobookings.in/" target="_blank" class="btn">Book a Call</a>
+  </div>
+</section>
 
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="89"><span><strong>Tableau</strong>90%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="85"><span><strong>PowerBI</strong>85%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>PySpark</strong>85%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="85"><span><strong>GIT</strong>85%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>ML</strong>85%</span></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="progress-wrap">
-						<h3><span class="name-left">Azure Data Factory</span><span class="value-right">95%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">AWS</span><span class="value-right">90%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">GCP</span><span class="value-right">80%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">Microsoft Suite</span><span class="value-right">85%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="progress-wrap">
-						<h3><span class="name-left">Shell Scripting</span><span class="value-right">100%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">Anaconda</span><span class="value-right">70%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-striped active" role="progressbar"
-						  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">Snowflake</span><span class="value-right">85%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">Java</span><span class="value-right">75%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-						  </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="resume">
+  <h2>Resume</h2>
+  <ul class="timeline">
+    <li><strong>Data Engineer</strong> — Reliant Technologies (Client: Fidelity), Remote US (Nov 2023 – Aug 2025)</li>
+    <li>Built Airflow + EMR pipelines to ingest vendor data into PostgreSQL & Snowflake. Improved runtime from 4 hours to 15 mins using Spark.</li>
+    <li>Implemented JDBC-based connectors, validation checks, schema enforcement, and multi-threaded parallelism.</li>
 
-	<div id="fh5co-work" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Work / Projects</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="project.html" class="work" style="background-image: url(images/portfolio-1.jpg);">
-						<div class="desc">
-							<h3>Text Generation</h3>
-							<span>ML</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="project.html" class="work" style="background-image: url(images/portfolio-2.jpg);">
-						<div class="desc">
-							<h3>Apple Stock Price Prediction</h3>
-							<span>Visualizaiton</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="project.html" class="work" style="background-image: url(images/portfolio-3.jpg);">
-						<div class="desc">
-							<h3>Hackathon</h3>
-							<span>Visualization</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="project.html" class="work" style="background-image: url(images/portfolio-4.jpg);">
-						<div class="desc">
-							<h3>Database Design for Restaurant</h3>
-							<span>DBMS</span>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <li><strong>Software Engineer</strong> — Trio Connect Pvt Ltd, Remote India (Jun 2020 – Dec 2021)</li>
+    <li>Built Power BI visualizations, migrated DBs to AWS Redshift/RDS, implemented polling APIs and DAX optimization.</li>
 
+    <li><strong>Masters in Data Analytics</strong> — Northeastern University</li>
+    <li>GPA: 3.75/4.0 | Coursework: Big Data, Database Management, Project Management</li>
 
-	
-	<div id="fh5co-started" class="fh5co-bg-dark">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Hire Me!</h2>
-					<p>If you're looking for a dynamic professional with skills in Data Engineering and Analytics, you're in the right place.</p>
-					<p><a href="mailto:miriyaladinesh1@gmail.com" class="btn btn-default btn-lg">Drop a Mail</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <li><strong>B.Tech in Electronics</strong> — Koneru Lakshmaiah Education Foundation</li>
+    <li>GPA: 7.28/10 | Coursework: Software Development, ML, DSA</li>
+  </ul>
+  <p><a href="Dinesh_Miriyala_Resume.pdf" class="btn" target="_blank">Download Resume</a></p>
+</section>
 
-	<div id="fh5co-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; 2024 All Rights Reserved by yours truly. <br>Designed by Dinesh Miriyala.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 hello@dineshmiriyala.com</p>
+  <p>📍 Andhra Pradesh, India</p>
+  <a href="mailto:hello@dineshmiriyala.com" class="btn">Drop a Mail</a>
+</section>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
+<div class="footer">
+  <p>&copy; 2025 Dinesh Miriyala — All Rights Reserved</p>
+  <div style="margin-top: 10px;">
+    <a href="#about" style="color: #fff; margin-right: 15px;">About</a>
+    <a href="#contact" style="color: #fff; margin-right: 15px;">Contact</a>
+    <a href="testimonials.html" style="color: #fff; margin-right: 15px;">Testimonials</a>
+    <a href="#book" style="color: #fff;">Hire Me</a>
+  </div>
+</div>
 
-	</body>
+</body>
 </html>
-
