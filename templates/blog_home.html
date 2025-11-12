@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>madeByMD2 | Blog</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+    body {
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .back-link {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      color: #999;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover {
+      color: #000;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .posts {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    .post {
+      transition: opacity 0.3s ease;
+    }
+    .post:hover {
+      opacity: 0.6;
+    }
+    .post a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    .post p {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 6px;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../index.html">← Back</a>
+  <h1>Blog</h1>
+
+  <div class="posts">
+    <div class="post">
+      <a href="blogs/billzen.html">BillZen: How I Rebuilt Invoicing for Small Businesses</a>
+      <p>From print shops to freelancers, I wanted a billing system that actually feels modern. BillZen was my take on making invoices fast, automated, and beautiful; powered entirely by Flask.</p>
+    </div>
+    <div class="post">
+      <a href="#">Exploring a Better Email Platform with Honest Pricing</a>
+      <p>I’ve been diving deep into how expensive email marketing platforms have become, most cross $2k for large lists. I’m exploring how to build something leaner, more transparent, and focused on analytics that actually help people understand their deliverability and reach.</p>
+    </div>
+    <div class="post">
+      <a href="#">Designing My Minimal Portfolio</a>
+      <p>I’ve always believed simplicity speaks louder than decoration. This portfolio is my expression of that, clean, focused, and built with intention.</p>
+    </div>
+  </div>
+
+  <footer>© 2025 Dinesh Miriyala</footer>
+</body>
+</html>

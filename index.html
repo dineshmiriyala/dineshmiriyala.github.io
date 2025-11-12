@@ -3,170 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Dinesh Miriyala Portfolio"/>
-  <title>Dinesh Miriyala | Data Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <meta name="description" content="Dinesh Miriyala"/>
+  <title>madeByMD2</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Space Mono', monospace; }
-    body { background: #f9f9f9; color: #333; }
-    header { background: #222; color: #fff; padding: 60px 20px; text-align: center; }
-    header img { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 20px; }
-    nav {
-      background: #111;
-      padding: 10px 20px;
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+    body, html {
+      height: 100%;
+      background: #fff;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-top: 50px;
+      padding: 20px;
     }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { font-size: 28px; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
-    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
-    .card { flex: 1 1 45%; background: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; }
-    .timeline { list-style: none; padding-left: 0; }
-    .timeline li { margin-bottom: 20px; }
-    .footer { background: #222; color: #fff; text-align: center; padding: 20px; }
-    .btn { display: inline-block; background: #007bff; color: #fff; padding: 10px 20px; margin-top: 10px; border-radius: 5px; text-decoration: none; }
-    .social-icons a { margin: 0 10px; color: #007bff; text-decoration: none; }
-    @media (max-width: 600px) {
-      .grid { flex-direction: column; }
-      .card { flex: 1 1 100%; }
-    }
-    .announcement-banner {
-      background: #ff9800;
-      color: #fff;
-      text-align: center;
-      padding: 10px 20px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
+    .container {
+      background: #fff;
+      color: #000;
+      max-width: 400px;
       width: 100%;
-      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #000;
+    }
+    p.subtitle {
+      font-size: 1.25rem;
+      color: #999;
+    }
+    .links {
+      display: flex;
+      gap: 30px;
+      font-size: 1rem;
+    }
+    .links a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
 
-<div class="announcement-banner">
-  🚀 New Website Coming Soon! Stay tuned for it.
-</div>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<header>
-  <img src="images/user-3.jpg" alt="Dinesh Miriyala">
-  <h1>Hi, I'm Dinesh 👋</h1>
-  <p>I build data pipelines, intelligent systems, and no-nonsense automation. Let’s solve something real together.</p>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/dinesh-miriyala-daq">LinkedIn</a>
-    <a href="https://github.com/dineshmiriyala">GitHub</a>
-    <a href="https://www.instagram.com/dinesh_miriyala?igsh=dDdhZXhxeHB2cDl0&utm_source=qr">Instagram</a>
+  <div class="container">
+    <h1>Dinesh Miriyala</h1>
+    <p class="subtitle">I build fast, ship faster, fail fastest 🦾🚀.</p>
+    <nav class="links">
+      <a href="https://x.com/madeByMD2" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;">
+        <img src="images/X_logo.svg" alt="X Logo" width="18" height="18">
+        @madeByMD2
+      </a>
+      <a href="templates/blog_home.html" style="display:flex;align-items:center;gap:8px;">
+        <img src="images/blog_logo.svg" alt="Blog Logo" width="18" height="18">
+        Blog
+      </a>
+      <a href="mailto:hello@dineshmiriyala.com" style="display:flex;align-items:center;gap:8px;">
+        <img src="images/email_logo.svg" alt="Email Logo" width="18" height="18">
+        Email
+      </a>
+    </nav>
+    <footer>© 2025 Dinesh Miriyala</footer>
   </div>
-</header>
-
-<section id="about">
-  <h2>About Me</h2>
-    <p>Hey! I’m Dinesh — a data-driven problem solver with a knack for turning chaos into clean, actionable systems. I specialize in building high-performance Data Engineering pipelines, full-stack software systems, and deploying smart solutions using Machine Learning and Generative AI.</p>
-  <p>Currently exploring freelancing opportunities, I love taking on real-world problems — whether it’s automating business workflows, crafting ETL systems, building chatbots, or training custom transformer models on Reddit or financial data. I work fast, adapt faster, and ship things that work.</p>
-  <p>With hands-on experience in Airflow, PySpark, Snowflake, PostgreSQL, Kafka, FastAPI, LLMs, and more — I thrive in both backend engineering and modern AI-driven applications. I’m always open to collaborations, contracts, or consulting roles where impact matters more than fluff.</p>
-  <p>Let’s build something valuable.</p>
-</section>
-
-<section id="skills">
-  <h2>Skills & Tools</h2>
-  <ul class="skills-list">
-    <li><strong>Data Engineering</strong>: Airflow, PySpark, Snowflake, PostgreSQL, AWS</li>
-    <li><strong>Software Engineering</strong>: FastAPI, Flask, Node.js, GitHub Actions, REST APIs</li>
-    <li><strong>Machine Learning</strong>: scikit-learn, Pandas, NLP, XGBoost, Transformers</li>
-    <li><strong>GenAI & LLMs</strong>: HuggingFace, LangChain, OpenAI API, Vector DBs</li>
-    <li><strong>Freelancer Stack</strong>: Zoho Mail, GitHub, Calendly, Notion, Figma</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Bill Generator</h3>
-      <p>Invoice management system for small businesses using Flask + SQLite</p>
-      <a href="https://github.com/dineshmiriyala/bill-generator" target="_blank" class="btn">GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Stock ETL Dashboard</h3>
-      <p>Real-time stock analytics using PySpark, PostgreSQL, and Snowflake</p>
-      <a href="https://github.com/dineshmiriyala/stock_etl_daily_faang" target="_blank" class="btn">GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Reddit NLP Bot</h3>
-      <p>Trained a custom transformer model on Reddit data using Python & NLP. Built tokenizer, attention, and deployed via REST API with 97% accuracy.</p>
-      <a href="https://github.com/dineshmiriyala/MLP" target="_blank" class="btn">GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Kafka Chat App</h3>
-      <p>Real-time messaging system built on Kafka and Python</p>
-      <a href="https://github.com/dineshmiriyala/Kafka-messenger" target="_blank" class="btn">GitHub</a>
-    </div>
-  </div>
-</section>
-
-<section id="book">
-  <h2>Book a Session</h2>
-  <p>If you're ready to solve a real business or tech problem, book a 1-on-1 session directly with me.</p>
-
-  <div class="card">
-    <h3>Let’s Talk About Your Problem Space</h3>
-    <p>Free 30-minute discovery call to understand your use case and explore how I can help.</p>
-    <a href="https://dineshmiriyala.zohobookings.in/" target="_blank" class="btn">Book a Call</a>
-  </div>
-
-  <div class="card">
-    <h3>Deep Dive: Problem Breakdown & Strategy</h3>
-    <p>Paid 30-minute call (₹499 INR) to deeply explore your problem, uncover root issues, and plan next steps.</p>
-    <a href="https://dineshmiriyala.zohobookings.in/" target="_blank" class="btn">Book a Call</a>
-  </div>
-</section>
-
-<section id="resume">
-  <h2>Resume</h2>
-  <ul class="timeline">
-    <li><strong>Data Engineer</strong> — Reliant Technologies (Client: Fidelity), Remote US (Nov 2023 – Aug 2025)</li>
-    <li>Built Airflow + EMR pipelines to ingest vendor data into PostgreSQL & Snowflake. Improved runtime from 4 hours to 15 mins using Spark.</li>
-    <li>Implemented JDBC-based connectors, validation checks, schema enforcement, and multi-threaded parallelism.</li>
-
-    <li><strong>Software Engineer</strong> — Trio Connect Pvt Ltd, Remote India (Jun 2020 – Dec 2021)</li>
-    <li>Built Power BI visualizations, migrated DBs to AWS Redshift/RDS, implemented polling APIs and DAX optimization.</li>
-
-    <li><strong>Masters in Data Analytics</strong> — Northeastern University</li>
-    <li>GPA: 3.75/4.0 | Coursework: Big Data, Database Management, Project Management</li>
-
-    <li><strong>B.Tech in Electronics</strong> — Koneru Lakshmaiah Education Foundation</li>
-    <li>GPA: 7.28/10 | Coursework: Software Development, ML, DSA</li>
-  </ul>
-  <p><a href="Dinesh_Miriyala_Resume.pdf" class="btn" target="_blank">Download Resume</a></p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>📧 hello@dineshmiriyala.com</p>
-  <p>📍 Andhra Pradesh, India</p>
-  <a href="mailto:hello@dineshmiriyala.com" class="btn">Drop a Mail</a>
-</section>
-
-<div class="footer">
-  <p>&copy; 2025 Dinesh Miriyala — All Rights Reserved</p>
-  <div style="margin-top: 10px;">
-    <a href="#about" style="color: #fff; margin-right: 15px;">About</a>
-    <a href="#contact" style="color: #fff; margin-right: 15px;">Contact</a>
-    <a href="testimonials.html" style="color: #fff; margin-right: 15px;">Testimonials</a>
-    <a href="#book" style="color: #fff;">Hire Me</a>
-  </div>
-</div>
 
 </body>
 </html>
