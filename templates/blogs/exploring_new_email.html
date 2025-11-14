@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MD2 | Exploring a New Email Platform: Honest Findings</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+    body {
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px 80px 20px;
+    }
+    .back-link {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      color: #999;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { color: #000; }
+    .home-link {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      color: #999;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .home-link:hover { color: #000; }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 35px 0 15px;
+      font-weight: 600;
+      color: #111;
+    }
+    p {
+      margin-bottom: 25px;
+      font-size: 1.05rem;
+      color: #333;
+    }
+    ul {
+      margin-bottom: 25px;
+      padding-left: 20px;
+      color: #333;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    a {
+      color: #000;
+    }
+    .social-links {
+      margin-top: 60px;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    .social-links a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .social-links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="../blog_home.html" class="back-link">← Back</a>
+  <a href="../../index.html" class="home-link">Home</a>
+
+  <h1>Exploring a New Email Platform: Honest Findings</h1>
+
+  <p>A little context. I am a solo indie developer, or at least trying to be one, and I am in the process of building products that help across a wider range of use cases.</p>
+
+  <p>For the past few weeks, I have been diving deep into the idea of building a new email sending and analytics platform. Something like a modern SES wrapper with deliverability dashboards, automations, domain intelligence, and dedicated IP pools.</p>
+
+  <p>The idea came when I was setting up a bulk email marketing campaign for one of my other products. I realized how expensive these platforms become at scale. Then I looked at SES and thought, this is cheap, maybe I can undercut the market. I was wrong.</p>
+
+  <p><i>Note: I am not building or intending to build a platform for cold emails. Cold emails are almost always marked as spam and are extremely compliance heavy. My goal was to facilitate sending only to users who signed up and to handle transactional emails.</i></p>
+
+  <p>The main goal was simple. Reduce the cost per email while also providing better analytics, better audience segmentation tools, deeper A/B testing, and quick landing page creation.</p>
+
+  <p>This space is far more mature, competitive, and difficult than it appears on the surface.</p>
+
+  <h2>1. SES Is Powerful but Not Designed for Multi Tenant Platforms</h2>
+
+  <p>Multi tenant sending in this context means sending emails on behalf of multiple users. After digging through the SES documentation and understanding their intended use cases, I realized that SES is not meant for multi tenant platforms at all.</p>
+
+  <p>SES is built primarily for internal usage, like engineering teams setting up infrastructure for their own company. It is reliable and inexpensive, but it does not translate into a public email marketing SaaS where anyone can sign up and start sending.</p>
+
+  <p>Here are some real SES concerns:</p>
+
+  <ul>
+    <li>You must request production access, and many legitimate requests still get rejected.</li>
+    <li>SES strongly dislikes cold email or anything even slightly risky.</li>
+    <li>Multi tenant sending is dangerous because one bad user affects everyone on the same account.</li>
+    <li>High bounce or complaint rates instantly damage the entire SES account.</li>
+    <li>Privacy changes like Apple MPP reduce tracking accuracy.</li>
+  </ul>
+
+  <p>This is why tools like <a href="https://emailoctopus.com" target="_blank">EmailOctopus</a>, <a href="https://mailbluster.com" target="_blank">Mailbluster</a>, and <a href="https://sendy.co" target="_blank">Sendy</a> force users to bring their own AWS account instead of risking their own infrastructure.</p>
+
+  <h2>2. Running Your Own SMTP and IP Pools Is a Massive Undertaking</h2>
+
+  <p>Trying to avoid SES risks leads straight into real ESP territory. This includes operating SMTP servers, warming up IPs, building routing logic, monitoring blacklists, processing bounces, managing feedback loops, scoring domains, and implementing throttling.</p>
+
+  <p>For a solo indie developer, this becomes an ongoing battle:</p>
+
+  <ul>
+    <li>IP warm up takes months</li>
+    <li>Gmail and Outlook reputation must be monitored constantly</li>
+    <li>Spam filters evolve every week</li>
+    <li>Inbox placement issues appear without warning</li>
+    <li>Support load increases heavily when emails land in spam</li>
+  </ul>
+
+  <p>Companies like Mailgun, SendGrid, SparkPost, and Postmark have entire teams dedicated to deliverability. Competing with that as a single developer is simply not feasible.</p>
+
+  <h2>3. The Email Market Is Extremely Mature</h2>
+
+  <p>Here are a few ESPs and their founding years:</p>
+
+  <ul>
+    <li>Mailchimp — 2001</li>
+    <li>Constant Contact — 1995</li>
+    <li>SendGrid — 2009</li>
+    <li>Mailgun — 2010</li>
+    <li>SparkPost — 2011</li>
+    <li>Postmark — 2009</li>
+    <li>Klaviyo — 2012</li>
+    <li>ConvertKit — 2013</li>
+  </ul>
+
+  <p>These companies have more than a decade of optimization, reputation, and trust. They have massive sending histories and deep inboxing relationships with mailbox providers.</p>
+
+  <h2>4. Klaviyo’s Journey Shows the Reality</h2>
+
+  <p>Klaviyo began around 2012, long before ecommerce email exploded. They focused heavily on Shopify and perfected segmentation, automation, and analytics. Over time they evolved into a complete customer data platform.</p>
+
+  <p>Today Klaviyo makes more than <strong>$900M ARR</strong>. Source: <a href="https://www.klaviyo.com/investors" target="_blank">Klaviyo Investors Page</a>.</p>
+
+  <p>Trying to replicate that in 2025 is not the same environment.</p>
+
+  <h2>5. Instantly AI Exploded but With Perfect Timing</h2>
+
+  <p>Instantly AI scaled rapidly during the huge cold outreach boom after the pandemic. They leveraged mailbox rotation, a simple UI, and AI powered features during the perfect moment.</p>
+
+  <p>According to Latka, they generate around <strong>$20M ARR</strong>. Source: <a href="https://getlatka.com/companies/instantly-ai" target="_blank">Latka Instantly AI</a>.</p>
+
+  <h2>6. Why Breaking Into Email Marketing in 2025 Is Extremely Hard</h2>
+
+  <ul>
+    <li>Email deliverability is unforgiving</li>
+    <li>Mailbox providers distrust new senders</li>
+    <li>IP warm up is slow and expensive</li>
+    <li>Spam filters are smarter than ever</li>
+    <li>One bad user can destroy an entire IP pool</li>
+    <li>Compliance laws like GDPR and CAN SPAM are strict</li>
+    <li>Churn is high</li>
+    <li>Customer acquisition is expensive</li>
+    <li>Analytics expectations are extremely high</li>
+  </ul>
+
+  <h2>7. Should New Founders Enter This Space</h2>
+
+  <p>Maybe, but not by building a full ESP or SES competitor. The real opportunity today lies in niche deliverability tooling:</p>
+
+  <ul>
+    <li>Domain health dashboards</li>
+    <li>AI based deliverability scoring</li>
+    <li>Email warm up diagnostics</li>
+    <li>MX validation tools</li>
+    <li>Sequence builders</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+
+  <p>This journey made me realize how difficult the email market really is. SES is strict for valid reasons, running your own SMTP is an engineering battle, and the market is dominated by companies with more than a decade of head start.</p>
+
+  <p>For now, I am parking this idea but documenting these findings for anyone thinking about entering the same space.</p>
+
+  <p>PEACE<br>Dinesh M</p>
+
+  <div class="social-links">
+    <a href="https://x.com/madeByMD2" target="_blank" rel="noopener noreferrer">
+      <img src="../../images/X_logo.svg" alt="X Logo" width="18" height="18">
+      @madeByMD2
+    </a>
+    <a href="../blog_home.html">
+      <img src="../../images/blog_logo.svg" alt="Blog Logo" width="18" height="18">
+      Blog
+    </a>
+    <a href="mailto:hello@dineshmiriyala.com">
+      <img src="../../images/email_logo.svg" alt="Email Logo" width="18" height="18">
+      Email
+    </a>
+  </div>
+
+  <footer>© 2025 Dinesh Miriyala</footer>
+</body>
+</html>
