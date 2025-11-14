@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BillZen</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+    body {
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px 80px 20px;
+    }
+    .back-link {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      color: #999;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { color: #000; }
+    .home-link {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      color: #999;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .home-link:hover { color: #000; }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    p {
+      margin-bottom: 25px;
+      font-size: 1.05rem;
+      color: #333;
+    }
+    .article-image {
+      width: 100%;
+      border-radius: 10px;
+      margin: 40px 0;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+    }
+    .social-links {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    .social-links a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .social-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <a href="../blog_home.html" class="back-link">← Back</a>
+  <a href="../../index.html" class="home-link">Home</a>
+
+  <h1>BillZen</h1>
+  <p class="subtitle">How I rebuilt invoicing for small businesses</p>
+
+  <p>When I first started working with small businesses, one problem stood out immediately: billing. Most of the software out there was either too bloated or too complicated for real-world usage. I wanted something clean, fast, and made for people like us. That’s how <strong>BillZen</strong> began.</p>
+
+  <img src="../../images/billzen_home.png" alt="BillZen dashboard overview" class="article-image">
+
+  <p>The goal was simple: make invoicing effortless. With Flask as the backbone, BillZen lets users create professional invoices in seconds. Every detail, from client selection to tax breakdown, is automated and designed for speed. I wanted it to feel like part of your workflow, not another tool you have to wrestle with.</p>
+
+  <p>As the project grew, I focused on design first. A bill shouldn’t just function, it should look beautiful when printed. Every template, font, and spacing element was tuned to give a clean, print‑ready output that feels professional, not cluttered.</p>
+
+  <img src="../../images/billzen_invoice.png" alt="BillZen invoice layout preview" class="article-image">
+
+  <p>What surprised me most was how small details made the biggest difference. Persistent alerts, adjustable fonts, and even a “Paid” toggle became user favorites. And because the entire system runs locally, businesses can work without relying on the cloud, something a lot of people appreciate more than ever.</p>
+
+  <p>BillZen isn’t just a billing tool. It’s my take on how software should work for people — simple, fast, and enjoyable to use. This project taught me that good design and utility don’t compete; they work together.</p>
+
+  <div class="social-links">
+    <a href="https://x.com/madeByMD2" target="_blank" rel="noopener noreferrer">
+      <img src="../../images/X_logo.svg" alt="X Logo" width="18" height="18">
+      @madeByMD2
+    </a>
+    <a href="../blog_home.html">
+      <img src="../../images/blog_logo.svg" alt="Blog Logo" width="18" height="18">
+      Blog
+    </a>
+    <a href="mailto:hello@dineshmiriyala.com">
+      <img src="../../images/email_logo.svg" alt="Email Logo" width="18" height="18">
+      Email
+    </a>
+  </div>
+
+  <footer>© 2025 Dinesh Miriyala</footer>
+</body>
+</html>
